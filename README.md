@@ -58,9 +58,22 @@ Submission is valid.
 
 ## Demo
 
-> **[Try it live on HuggingFace Spaces →](https://huggingface.co/spaces/AmareshHebbar/hiresignal)**
+> **[Live sandbox on HuggingFace Spaces →](https://huggingface.co/spaces/AmareshHebbar/hiresignal)**
 
-Paste any lines from `candidates.jsonl` or click **Load sample** — see ranked results in seconds.
+![HireSignal live demo](screenshots/hiresignal_4.png)
+
+## Output
+
+![Top 10 ranked candidates](screenshots/hiresignal_5.png)
+
+## Pipeline
+
+![Pipeline run](screenshots/hiresignal_1.png)
+
+![Submission validated](screenshots/hiresignal_2.png)
+
+![Tests passing](screenshots/hiresignal_3.png)
+
 
 ---
 
