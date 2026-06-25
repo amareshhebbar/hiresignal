@@ -1,0 +1,52 @@
+team_name: "hiresignal-gvamaresh"
+
+primary_contact:
+  name: "G V Amaresh"
+  email: "gvamaresh@gmail.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "G V Amaresh"
+    email: "gvamaresh@gmail.com"
+    role: "ML Engineer"
+
+github_repo: "https://github.com/amareshhebbar/hiresignal"
+
+sandbox_link: "https://huggingface.co/spaces/AmareshHebbar/hiresignal"
+
+reproduce_command: "python rank.py --candidates ./dataset/candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Fedora Linux workstation"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.11"
+  os: "Fedora Linux"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: true
+  pre_computation_time_minutes: 5
+
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude for architecture review and debugging. All scoring logic,
+  signal weights, and honeypot heuristics were written and verified by me.
+  No candidate data was sent to any external LLM during ranking.
+
+methodology_summary: |
+  Multi-signal rule-based ranker with semantic embedding refinement on top-500.
+  Four components: skill match (40%) weighted by proficiency + duration +
+  assessments; career trajectory (35%) covering title quality, company type,
+  production AI evidence in role descriptions, YoE band, location; behavioral
+  signals (25%) treating recency and response rate as availability gates; semantic
+  similarity (20% blend on top-500) via paraphrase-MiniLM-L6-v2 on CPU.
+  Honeypot detection uses six impossibility checks. Runtime ~35s on CPU.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

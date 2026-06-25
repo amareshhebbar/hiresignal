@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.model_cache/
+hf-space/
+dataset/candidates.jsonl
+dataset/*.docx
+dataset/README.docx
+dataset/submission_spec.docx
+dataset/redrob_signals_doc.docx
+dataset/job_description.docx
+dataset/submission_metadata_template.yaml
+*.egg-info/
+dist/
+build/
+.pytest_cache/
